@@ -927,7 +927,7 @@ class Server:
             prefix = 'quit'
             color = 'message_quit'
         if msg:
-            weechat.prnt(self.buffer, "%s%s%s%s has %s %s"
+            weechat.prnt_date_tags(self.buffer, 0, "no_highlight,no_log,notify_none", "%s%s%s%s has %s %s"
                          % (weechat.prefix(prefix),
                             weechat.color("chat_nick"),
                             buddy.alias,
